@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+
+body {
+    background-color: #222;
+    color: #FFF;
+    font-family: 'Khula', 'Red Hat Text', sans-serif;
+    overflow-y: scroll;
+}
+
+header {
+    max-width: 50%;
+    height: 4rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+}
+
+header > ul {
+    margin: auto;
+}
+
+header > ul > li {
+    padding-top: 1rem;
+    margin: auto;
+}
+
+main {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+main > * {
+    margin-top: 1rem;
+}
+
+main > ul {
+    padding-left: 15%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-bottom: .5rem;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    background-color: #333;
+}
+
+footer > ul {
+    display: flex;
+    flex-direction: row;
+}
+
+footer > ul > li {
+    margin: 2rem auto;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #92F;
+    border-radius: .2em;
+    padding: .4rem 1rem;
+    margin-top: 2rem;
+}
+
+a:hover {
+    background-color: #4C1180;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Noto Serif KR', 'Nixie One', serif;
+    margin: .5rem 0;
+}
+
+h1 {
+    margin: .75rem 0;
+    font-size: 4rem;
+}
+
+h2 {
+    margin: .5rem 0;
+    font-size: 3.5rem;
+}
+
+h3 {
+    margin: .5rem 0;
+    font-size: 3rem;
+}
+
+h4 {
+    margin: .5rem 0;
+    font-size: 2.5rem;
+}
+
+h5, h6 {
+    margin: .5rem 0;
+    font-size: 2rem;
+}
+
+video {
+    max-width: 50%;
+}
