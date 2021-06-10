@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tik.tv - Criar clip</title>
+
+    <link rel="stylesheet" href="../commons/css/reset.css">
+    <link rel="stylesheet" href="../commons/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <main id="main-section">
+        <section id="video_player-wrap">
+            <video id="video_player" loop muted></video>
+            <div id="clip-description">
+                <h1 id="clip-title" placeholder="AAA" contenteditable>Título</h2>
+            </div>
+        </section>
+    </main>
+
+    <section id="control_panel">
+        <div id="clip-range" class="hide-value">
+            <div id="clip-range-track">
+                <div class="clip-range-handle" id="clip-range-start_handle" tabindex="0"></div>
+                <div class="clip-range-handle" id="clip-range-end_handle" tabindex="0"></div>
+            </div>
+            <div id="clip-range-value" id="clip-range-end_handle"></div>
+        </div>
+        <section id="control_panel-controll">
+            <ul id="control_panel-controls">
+                <li class="control_panel-item">
+                    <a id="cancel-button" class="fancy-button" tabindex="0">Cancelar</a>
+                </li>
+                <li id="control_panel-time" class="control_panel-item">
+                    <button id="play-button" class="play-state">
+                        <svg class="play-icon" viewbox="0 0 24 24">
+                            <path d="M8,5.14V19.14L19,12.14L8,5.14Z"></path>
+                        </svg>
+                        <svg class="pause-icon" viewbox="0 0 24 24">
+                            <path d="M14,19H18V5H14M6,19H10V5H6V19Z"></path>
+                        </svg>
+                    </button>
+                    <div id="control_panel-time-indicators">
+                        <span id="start_time-indicator">00:00</span>
+                        /
+                        <span id="end_time-indicator">00:00</span>
+                    </div>
+                    <button id="playback_rate-button">1x</button>
+                </li>
+                <li class="control_panel-item">
+                    <a class="fancy-button" href="../index.html" target="_blank">Clipar</a>
+                </li>
+            </ul>
+        </section>
+    </section>
+
+    <div id="choose_file-cover">
+        <svg style="width: 6em; height: 6em" viewbox="0 0 24 24">
+          <path fill="currentColor" d="M14,13V17H10V13H7L12,8L17,13M19.35,10.03C18.67,6.59 15.64,4 12,4C9.11,4 6.6,5.64 5.35,8.03C2.34,8.36 0,10.9 0,14A6,6 0 0,0 6,20H19A5,5 0 0,0 24,15C24,12.36 21.95,10.22 19.35,10.03Z"></path>
+        </svg>
+        <span>Escolher vídeo</span>
+    </div>
+
+    <script src="./js/script.js" type="module"></script>
+    
+</body>
+</html>

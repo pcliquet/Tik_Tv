@@ -1,0 +1,130 @@
+main#main-section {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: grid;
+    gap: 2rem;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 1em;
+}
+
+.page-content-wrap {
+    width: 100%;
+    max-width: calc((100vh - 10.5rem) * var(--aspect-ratio));
+    height: 100%;
+    margin: auto;
+    scroll-snap-align: start end;
+}
+
+.page-content-wrap.wrap-video-content {
+    max-height: calc(100vh - 10.5rem);
+    margin: auto;
+}
+
+article.page-content {
+    height: 100%;
+    margin: auto;
+}
+
+article.page-content.video-content {
+    aspect-ratio: var(--aspect-ratio);
+    margin: auto;
+    border-radius: var(--scale);
+    background-color: #111;
+    overflow: hidden;
+    box-shadow: 0 .2rem .4rem #1113;
+}
+
+.video-post-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+}
+
+.video-post-container > * {
+    grid-area: 1 / 1 / 2 / 2;
+    z-index: 0;
+}
+
+.video-post-player {
+    width: 100%;
+    height: 100%;
+}
+
+
+.video-post-description {
+    padding: 2rem 1rem;
+    background-image: linear-gradient(165deg, #111B, #1113 50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (hover: hover) {
+    .video-post-description {
+        transition: opacity 256ms;
+    }
+
+    article.page-content.video-content:hover .video-post-description {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@media (hover: none) {
+    article.page-content.video-content:active .video-post-description {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.page-content-wrap.wrap-video-content.is-active .video-post-description {
+    animation: hide-description 256ms backwards;
+    animation-delay: 2s;
+}
+@keyframes hide-description {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.video-post-title {
+    text-transform: uppercase;
+    text-shadow: .1em .1em 0 #111;
+}
+
+
+
+ul#page-navigation-navigator {
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    gap: 1rem;
+}
+/* li.page-navigation-item {
+    
+} */
+
+a.page-navigation-anchor {
+    border-radius: .75rem;
+    padding: .5rem 1rem;
+    margin: -.5rem 0;
+    color: inherit;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 255ms;
+}
+a.page-navigation-anchor:hover {
+    background-color: #333;
+}
+
+a.page-navigation-anchor svg {
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+}
+a.page-navigation-anchor svg > path {
+    fill: currentColor;
+}

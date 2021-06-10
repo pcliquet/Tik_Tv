@@ -1,54 +1,136 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <title>Twitch toker</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="reset.css">
-        <link type="text/css" rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h2>Perfil</h2>
-            <ul>
-                <li>foto</li>
-                <li>Josue-Tv</li>
-                <li>Tv-Josue</li>
-                <li>
-                    <a href='./chat.html'>Chat</a>
-                </li>
-            </ul>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tik.tv</title>
 
-        <main>
-            <video src="videos/yonezada.mp4"></video>
-            <video src="videos/rengar_01.webm"></video>
-            <video src="videos/rengar_02.webm"></video>
-            <video src="videos/rengar_03.webm"></video>
-            <video src="videos/yasuo_01.webm"></video>
-            <video src="videos/viego.webm"></video>
-        </main>
+    <link rel="stylesheet" href="./commons/css/reset.css">
+    <link rel="stylesheet" href="./commons/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
 
-        <footer>
-            <ul>
-                <li>
-                    <a href="./comunidades.html">Comunidade</a>
+    <main id="main-section">
+        <div id="feature-content-container" class="page-content-wrap wrap-video-content is-active">
+            <article class="page-content video-content">
+                <div class="video-post-container">
+                    <video id="feature-content-player" class="video-post-player" autoplay loop muted></video>
+                    <div class="video-post-description">
+                        <h1 id="feature-content-title" class="video-post-title">...</h2>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div id="secondary-content-container" class="page-content-wrap wrap-video-content">
+            <article class="page-content video-content">
+                <div class="video-post-container">
+                    <video class="video-post-player" src="./videos/rengar_01.webm" autoplay loop muted></video>
+                    <div class="video-post-description">
+                        <h1 class="video-post-title">Primeira partida de Rengar</h2>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="page-content-wrap wrap-video-content">
+            <article class="page-content video-content">
+                <div class="video-post-container">
+                    <video class="video-post-player" src="./videos/rengar_02.webm" autoplay loop muted></video>
+                    <div class="video-post-description">
+                        <h1 class="video-post-title">Jogando de rengar novamente</h2>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="page-content-wrap wrap-video-content">
+            <article class="page-content video-content">
+                <div class="video-post-container">
+                    <video class="video-post-player" src="./videos/rengar_03.webm" autoplay loop muted></video>
+                    <div class="video-post-description">
+                        <h1 class="video-post-title">Gatinho na floresta</h2>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="page-content-wrap wrap-video-content">
+            <article class="page-content video-content">
+                <div class="video-post-container">
+                    <video class="video-post-player" src="./videos/viego.webm" autoplay loop muted></video>
+                    <div class="video-post-description">
+                        <h1 class="video-post-title">Viego Rei Destruindo</h2>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="page-content-wrap wrap-video-content">
+            <article class="page-content video-content">
+                <div class="video-post-container">
+                    <video class="video-post-player" src="./videos/yasuo_01.webm" autoplay loop muted></video>
+                    <div class="video-post-description">
+                        <h1 class="video-post-title">Nunca joguei de Yasuo</h2>
+                    </div>
+                </div>
+            </article>
+        
+            <div class="page-content-wrap wrap-video-content">
+                <article class="page-content video-content">
+                    <div class="video-post-container">
+                        <video class="video-post-player" src="./videos/yonezada.webm" autoplay loop muted></video>
+                        <div class="video-post-description">
+                            <h1 class="video-post-title">Yonezada</h2>
+                        </div>
+                    </div>
+                </article>
+        </div>
+
+        <div id="control_panel-mask"></div>
+    </main>
+
+    <section id="control_panel">
+        <div>
+            Painel de Controle
+        </div>
+        <nav id="page-navigation">
+            <ul id="page-navigation-navigator">
+                <li class="page-navigation-item">
+                    <a class="page-navigation-anchor" href="#">
+                        <svg class="page-navigation-icon" viewBox="0 0 24 24">
+                            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="page-navigation-item">
+                    <a class="page-navigation-anchor" href="./create-clip/">
+                        <svg class="page-navigation-icon" viewBox="0 0 24 24">
+                            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="page-navigation-item">
+                    <a class="page-navigation-anchor" href="#">
+                        <svg class="page-navigation-icon" viewBox="0 0 24 24">
+                            <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="page-navigation-item">
+                    <a class="page-navigation-anchor" href="#">
+                        <svg class="page-navigation-icon" viewBox="0 0 24 24">
+                            <path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"/>
+                        </svg>
+                    </a>
                 </li>
             </ul>
-            <ul>
-                <li>
-                    <a href="./explicação.html">Likes</a>
-                </li>
-                <li>
-                    <a href="./index.html"> Home</a>
-                </li>
-                <li>
-                    <a href="/novo_video"> +</a>
-                </li>
-                <li>
-                    <a href="./config.html"> Perfil</a>
-                </li>
-            </ul>
-        </footer>
-    </body>
+        </nav>
+    </section>
+
+    <script src="./js/script.js" type="module"></script>
+    
+</body>
 </html>

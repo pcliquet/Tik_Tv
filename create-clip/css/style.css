@@ -1,0 +1,206 @@
+#choose_file-cover {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  font-size: clamp(2rem, 10vw, 7vh);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  user-select: none;
+}
+
+
+main#main-section {
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - 9rem);
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+  scroll-padding-top: 1em;
+}
+
+section#video_player-wrap {
+  height: 100%;
+  margin: auto;
+  aspect-ratio: var(--aspect-ratio);
+  border-radius: var(--scale);
+  background-color: #111;
+  overflow: hidden;
+  box-shadow: 0 .2rem .4rem #1113;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+}
+section#video_player-wrap > * {
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 0;
+}
+
+
+#video_player {
+  width: 100%;
+  height: 100%;
+}
+
+#clip-description {
+  padding: 2rem 1rem;
+  background-image: linear-gradient(165deg, #111B, #1113 50%);
+}
+#clip-title {
+  text-transform: uppercase;
+  text-shadow: .1em .1em 0 #111;
+}
+
+
+
+
+#clip-range {
+  --start: 0;
+  --end: 1;
+  --value: .5;
+  width: 100%;
+  height: 100%;
+  border-left: 2rem solid #333;
+  border-right: 2rem solid #333;
+  border-radius: var(--scale);
+  background-color: #333;
+  background-image: linear-gradient(90deg, #777 8%, transparent 8%);
+  background-size: 1rem 10%;
+  background-repeat: repeat-x;
+  background-position: center center;
+  user-select: none;
+  touch-action: none;
+  cursor: pointer;
+  display: grid;
+}
+#clip-range:active {
+  cursor: col-resize;
+}
+#clip-range > * {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+#clip-range-track {
+  width: calc((var(--end) - var(--start)) * 100%);
+  height: 100%;
+  margin-left: calc(var(--start) * 100%);
+  border-top: .2rem solid #CCC;
+  border-bottom: .2rem solid #CCC;
+  background-color: #444;
+  background-image: linear-gradient(90deg, #999 8%, transparent 8%);
+  background-size: 1rem 25%;
+  background-repeat: repeat-x;
+  background-position: center center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clip-range-handle {
+  width: 2rem;
+  height: calc(100% + .4rem);
+  margin-top: -.2rem;
+  background-color: #FFF;
+  background-image: linear-gradient(var(--dark-color), var(--dark-color));
+  background-size: .1rem 30%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-top-width: 1.4rem;
+  border-bottom-width: 1.4rem;
+  cursor: col-resize;
+}
+#clip-range-start_handle.clip-range-handle {
+  margin-left: -2rem;
+  border-radius: .75rem 0 0 .75rem;
+}
+#clip-range-end_handle.clip-range-handle {
+  margin-right: -2rem;
+  border-radius: 0 .75rem .75rem 0;
+}
+
+#clip-range-value {
+  width: .375rem;
+  height: 100%;
+  margin-left: calc(var(--value) * 100% - .35rem);
+  margin-right: -.1875rem;
+  border-left: .125rem solid #333;
+  border-right: .125rem solid #333;
+  background-color: #FFF;
+  visibility: visible;
+  pointer-events: none;
+}
+#clip-range.hide-value > #clip-range-value {
+  display: none;
+}
+
+
+
+#control_panel-controll {
+  line-height: 2.5rem;
+  vertical-align: bottom;
+}
+
+#control_panel-controls {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+/* .control_panel-item {
+
+} */
+
+#control_panel-time {
+  height: 2.5rem;
+  padding: 0 .25rem;
+  border-radius: 1rem;
+  background-color: #333;
+  display: flex;
+  gap: .5rem;
+}
+
+#control_panel-time-indicators {
+  padding: 0 .75rem;
+}
+
+#control_panel button {
+  appearance: none;
+  height: 2rem;
+  margin: .25rem 0;
+  padding: 0 .75rem;
+  border: none;
+  border-radius: .8rem;
+  background-color: #222;
+  color: inherit;
+  cursor: pointer;
+  display: inline;
+}
+#control_panel button:hover {
+  background-color: #111;
+}
+
+#play-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  display: none;
+}
+
+#play-button svg > path{
+  fill: currentColor;
+}
+
+#play-button.play-state > .play-icon, #play-button.pause-state > .pause-icon {
+  display: block;
+}
+#play-button.pause-state {
+  background-color: #666;
+}
+
+#playback_rate-button {
+  min-width: 3.2rem;
+}
