@@ -37,7 +37,7 @@ if (videoFile) {
   })
 }
 
-function onMountVideoPlayer() {
+function onMounted() {
   if (videoPlayer_node.paused) {
     window.localStorage.removeItem("clip-file")
     videoContainer_node.remove()

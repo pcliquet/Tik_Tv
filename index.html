@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="./commons/css/style.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body onload="onMounted()">
 
     <main id="main-section">
         <div id="feature-content-container" class="page-content-wrap wrap-video-content is-active">
             <article class="page-content video-content">
                 <div class="video-post-container">
-                    <video id="feature-content-player" class="video-post-player" onload="onMountVideoPlayer()" autoplay loop muted></video>
+                    <video id="feature-content-player" class="video-post-player" autoplay loop muted></video>
                     <div class="video-post-description">
                         <h1 id="feature-content-title" class="video-post-title">...</h2>
                     </div>
@@ -130,7 +130,7 @@
         </nav>
     </section>
 
-    <script src="./js/script.js" type="module"></script>
+    <script src="./js/script.js"></script>
     
 </body>
 </html>
