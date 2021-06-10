@@ -37,10 +37,10 @@ if (videoFile) {
   })
 }
 
-setTimeout(() => {
+function onMountVideoPlayer() {
   if (videoPlayer_node.paused) {
     window.localStorage.removeItem("clip-file")
     videoContainer_node.remove()
     secondaryContainer_node.classList.add("is-active")
   }
-}, 100)
+}
