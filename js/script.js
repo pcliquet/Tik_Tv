@@ -37,10 +37,14 @@ if (videoFile) {
   })
 }
 
-function onMounted() {
-  if (videoPlayer_node.paused) {
-    window.localStorage.removeItem("clip-file")
-    videoContainer_node.remove()
-    secondaryContainer_node.classList.add("is-active")
-  }
-}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    if (videoPlayer_node.paused) {
+      console.log("paused")
+      window.localStorage.removeItem("clip-file")
+      videoContainer_node.remove()
+      secondaryContainer_node.classList.add("is-active")
+    }
+  }, 500)
+})

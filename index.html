@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./commons/css/style.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body onload="onMounted()">
+<body>
 
     <main id="main-section">
         <div id="feature-content-container" class="page-content-wrap wrap-video-content is-active">
@@ -77,16 +77,17 @@
                     </div>
                 </div>
             </article>
+        </div>
         
-            <div class="page-content-wrap wrap-video-content">
-                <article class="page-content video-content">
-                    <div class="video-post-container">
-                        <video class="video-post-player" src="./videos/yonezada.webm" autoplay loop muted></video>
-                        <div class="video-post-description">
-                            <h1 class="video-post-title">Yonezada</h2>
-                        </div>
+        <div class="page-content-wrap wrap-video-content">
+            <article class="page-content video-content">
+                <div class="video-post-container">
+                    <video class="video-post-player" src="./videos/yonezada.webm" autoplay loop muted></video>
+                    <div class="video-post-description">
+                        <h1 class="video-post-title">Yonezada</h2>
                     </div>
-                </article>
+                </div>
+            </article>
         </div>
 
         <div id="control_panel-mask"></div>
@@ -130,7 +131,7 @@
         </nav>
     </section>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" type="module"></script>
     
 </body>
 </html>

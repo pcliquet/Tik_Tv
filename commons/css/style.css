@@ -83,7 +83,7 @@ h6 {
     background-image: linear-gradient(transparent 33%, var(--background-color) 66%);
     position: sticky;
     left: 0;
-    bottom: -1rem;
+    bottom: 0rem;
 }
 
 section#control_panel {
