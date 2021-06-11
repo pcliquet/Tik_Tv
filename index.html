@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tik.tv</title>
 
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
+    <link rel="icon" href="./Logo/logotipo.png">
     <link rel="stylesheet" href="./commons/css/reset.css">
     <link rel="stylesheet" href="./commons/css/style.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -16,20 +18,20 @@
         <div id="feature-content-container" class="page-content-wrap wrap-video-content is-active">
             <article class="page-content video-content">
                 <div class="video-post-container">
-                    <video id="feature-content-player" class="video-post-player" autoplay loop muted></video>
+                    <video id="feature-content-player" class="video-post-player" autoplay loop></video>
                     <div class="video-post-description">
                         <h1 id="feature-content-title" class="video-post-title">...</h2>
                     </div>
                 </div>
             </article>
         </div>
-        
+
         <div id="secondary-content-container" class="page-content-wrap wrap-video-content">
             <article class="page-content video-content">
                 <div class="video-post-container">
-                    <video class="video-post-player" src="./videos/rengar_01.webm" autoplay loop muted></video>
+                    <video class="video-post-player" src="./assets/videos/katarina.webm" autoplay loop></video>
                     <div class="video-post-description">
-                        <h1 class="video-post-title">Primeira partida de Rengar</h2>
+                        <h1 class="video-post-title">Katarina comendo filé de Fizz</h2>
                     </div>
                 </div>
             </article>
@@ -38,18 +40,7 @@
         <div class="page-content-wrap wrap-video-content">
             <article class="page-content video-content">
                 <div class="video-post-container">
-                    <video class="video-post-player" src="./videos/rengar_02.webm" autoplay loop muted></video>
-                    <div class="video-post-description">
-                        <h1 class="video-post-title">Jogando de rengar novamente</h2>
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="page-content-wrap wrap-video-content">
-            <article class="page-content video-content">
-                <div class="video-post-container">
-                    <video class="video-post-player" src="./videos/rengar_03.webm" autoplay loop muted></video>
+                    <video class="video-post-player" src="./assets/videos/rengar_03.webm" loop></video>
                     <div class="video-post-description">
                         <h1 class="video-post-title">Gatinho na floresta</h2>
                     </div>
@@ -60,9 +51,9 @@
         <div class="page-content-wrap wrap-video-content">
             <article class="page-content video-content">
                 <div class="video-post-container">
-                    <video class="video-post-player" src="./videos/viego.webm" autoplay loop muted></video>
+                    <video class="video-post-player" src="./assets/videos/rengar_01.webm" loop></video>
                     <div class="video-post-description">
-                        <h1 class="video-post-title">Viego Rei Destruindo</h2>
+                        <h1 class="video-post-title">Primeira partida de Rengar</h2>
                     </div>
                 </div>
             </article>
@@ -71,7 +62,7 @@
         <div class="page-content-wrap wrap-video-content">
             <article class="page-content video-content">
                 <div class="video-post-container">
-                    <video class="video-post-player" src="./videos/yasuo_01.webm" autoplay loop muted></video>
+                    <video class="video-post-player" src="./assets/videos/yasuo_01.webm" loop></video>
                     <div class="video-post-description">
                         <h1 class="video-post-title">Nunca joguei de Yasuo</h2>
                     </div>
@@ -82,46 +73,89 @@
         <div class="page-content-wrap wrap-video-content">
             <article class="page-content video-content">
                 <div class="video-post-container">
-                    <video class="video-post-player" src="./videos/yonezada.webm" autoplay loop muted></video>
+                    <video class="video-post-player" src="./assets/videos/yonezada.webm" loop></video>
                     <div class="video-post-description">
                         <h1 class="video-post-title">Yonezada</h2>
                     </div>
                 </div>
             </article>
         </div>
+        
+        <div class="page-content-wrap wrap-video-content">
+            <article class="page-content video-content">
+                <div class="video-post-container">
+                    <video class="video-post-player" src="./assets/videos/rengar_02.webm" loop></video>
+                    <div class="video-post-description">
+                        <h1 class="video-post-title">Jogando de rengar novamente</h2>
+                    </div>
+                </div>
+            </article>
+        </div>
 
-        <div id="control_panel-mask"></div>
+        <div></div>
     </main>
 
+    <div id="control_panel-mask"></div>
+
     <section id="control_panel">
-        <div>
-            Painel de Controle
-        </div>
+        <section id="communities-container">
+            <img src="./assets/images/logo.svg" alt="tik.tv" title="tik.tv">
+            
+            <a id="new_community-button" class="communitie-button" href="/comunidades/nova-comunidade/">
+                <img class="communitie-button-image" src="../../assets/images/comunidade.jpg" alt="">
+                <div class="communitie-button-label"></div>
+            </a>
+            <a class="communitie-button" href="/comunidades/insper/">
+                <img class="communitie-button-image" src="./assets/images/insper.png" alt="Insper">
+                <div class="communitie-button-label">Insper</div>
+            </a>
+            <a class="communitie-button" href="#">
+                <img class="communitie-button-image" src="./assets/images/alanzoka.png" alt="alanzoka">
+                <div class="communitie-button-label">alanzoka</div>
+            </a>
+            <a class="communitie-button" href="#">
+                <img class="communitie-button-image" src="./assets/images/YoDa.png" alt="Yoda">
+                <div class="communitie-button-label">Yoda</div>
+            </a>
+            <a class="communitie-button" href="#">
+                <img class="communitie-button-image" src="./assets/images/jukes.png" alt="jukes">
+                <div class="communitie-button-label">jukes</div>
+            </a>
+            <a id="communitie-create-button" class="communitie-button" href="./comunidades/nova-comunidade/" title="Criar comunidade">
+                <svg class="communitie-button-icon" viewBox="0 0 24 24">
+                    <path d="M19 17V19H7V17S7 13 13 13 19 17 19 17M16 8A3 3 0 1 0 13 11A3 3 0 0 0 16 8M19.2 13.06A5.6 5.6 0 0 1 21 17V19H24V17S24 13.55 19.2 13.06M18 5A2.91 2.91 0 0 0 17.11 5.14A5 5 0 0 1 17.11 10.86A2.91 2.91 0 0 0 18 11A3 3 0 0 0 18 5M8 10H5V7H3V10H0V12H3V15H5V12H8Z" />
+                </svg>
+                <div class="communitie-button-label">Criar</div>
+            </a>
+        </section>
         <nav id="page-navigation">
             <ul id="page-navigation-navigator">
                 <li class="page-navigation-item">
-                    <a class="page-navigation-anchor" href="#">
+                    <a class="page-navigation-anchor is-active" href="index.html" title="Início">
                         <svg class="page-navigation-icon" viewBox="0 0 24 24">
                             <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"/>
                         </svg>
                     </a>
                 </li>
+
                 <li class="page-navigation-item">
-                    <a class="page-navigation-anchor" href="./create-clip/">
+                    <a class="page-navigation-anchor" href="./create-clip/" title="Criar clip">
                         <svg class="page-navigation-icon" viewBox="0 0 24 24">
                             <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
                         </svg>
                     </a>
                 </li>
+
                 <li class="page-navigation-item">
-                    <a class="page-navigation-anchor" href="#">
+                    <a class="page-navigation-anchor" href="#" title="Likes">
                         <svg class="page-navigation-icon" viewBox="0 0 24 24">
                             <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/>
                         </svg>
                     </a>
                 </li>
+
                 <li class="page-navigation-item">
-                    <a class="page-navigation-anchor" href="#">
+                    <a class="page-navigation-anchor" href="#" title="Perfil">
                         <svg class="page-navigation-icon" viewBox="0 0 24 24">
                             <path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"/>
                         </svg>

@@ -39,11 +39,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2.5em;
-    font-weight: bold;
 }
 h2 {
     font-size: 2em;
-    font-weight: bold;
 }
 h3 {
     font-size: 1.75em;
@@ -56,6 +54,10 @@ h5 {
 }
 h6 {
     font-size: 1em;
+}
+
+h1, h2, strong {
+    font-weight: bold;
 }
 
 
@@ -79,11 +81,11 @@ h6 {
 
 #control_panel-mask {
     width: 100%;
-    height: 9.5rem;
+    height: 10rem;
     background-image: linear-gradient(transparent 33%, var(--background-color) 66%);
-    position: sticky;
+    position: fixed;
     left: 0;
-    bottom: 0rem;
+    bottom: 0;
 }
 
 section#control_panel {
@@ -97,7 +99,7 @@ section#control_panel {
     background-color: var(--foreground-color);
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 3.5rem 2.5rem;
+    grid-template-rows: 4rem 2.5rem;
     gap: .5rem;
     position: fixed;
     bottom: 0;
@@ -105,6 +107,117 @@ section#control_panel {
     right: 0;
 }
 
-/* nav#page-navigation {
+
+#communities-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, 3.2rem);
+    grid-template-rows: 3.2rem;
+    gap: 1rem;
+}
+
+a.communitie-button {
+    background-color: #333;
+    border-radius: 40%;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    display: grid;
+    place-items: center;
+    grid-template-columns: minmax(0, 100%);
+    transition: background-color 256ms;
+}
+a.communitie-button > * {
+    grid-area: 1 / 1 / 2 / 2;
+}
+a.communitie-button:hover {
+    background-color: #222;
+}
+a.communitie-button:hover .communitie-button-image {
+    opacity: .75;
+}
+
+.communitie-button-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 35%;
+}
+
+.communitie-button-label {
+    margin-bottom: -1.2rem;
+    font-size: 1rem;
+    line-height: 2.3ex;
+    white-space: nowrap;
+    text-align: center;
+    place-self: end center;
+    visibility: hidden;
+}
+a.communitie-button:hover .communitie-button-label {
+    visibility: visible;
+}
+
+.communitie-button-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.communitie-button-icon path {
+    fill: currentColor;
+}
+
+
+
+ul#page-navigation-navigator {
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    gap: 1rem;
+}
+
+/* li.page-navigation-item {
     
 } */
+
+
+a.page-navigation-anchor {
+    padding: .75rem 1rem;
+    margin: -.75rem -1rem;
+    border-radius: 1rem;
+    color: inherit;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 255ms;
+}
+a.page-navigation-anchor:hover {
+    background-color: #333;
+}
+a.page-navigation-anchor.is-active {
+    background-color: #666;
+}
+
+a.page-navigation-anchor svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+}
+a.page-navigation-anchor svg > path {
+    fill: currentColor;
+}
+
+
+#teste {
+    margin: 0 auto;
+}
+
+div#teste > a {
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 255ms;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+div#teste > a:hover {
+    background-color: #333;
+}

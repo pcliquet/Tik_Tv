@@ -199,3 +199,10 @@ cancelButton_node.addEventListener("click", () => {
   window.localStorage.removeItem("clip-file")
   location.href = "../"
 })
+
+
+const clipVideo_node = document.querySelector("#clip_video-button")
+
+clipVideo_node.addEventListener("click", () => {
+  videoPlayer_node.pause()
+})

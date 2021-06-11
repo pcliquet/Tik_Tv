@@ -1,12 +1,17 @@
 main#main-section {
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 1rem ;
     display: grid;
     gap: 2rem;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-padding-top: 1em;
+}
+
+main#main-section > div:last-child {
+    width: 100%;
+    height: 7.5rem;
 }
 
 .page-content-wrap {
@@ -93,38 +98,4 @@ article.page-content.video-content {
 .video-post-title {
     text-transform: uppercase;
     text-shadow: .1em .1em 0 #111;
-}
-
-
-
-ul#page-navigation-navigator {
-    display: grid;
-    grid-auto-flow: column;
-    place-items: center;
-    gap: 1rem;
-}
-/* li.page-navigation-item {
-    
-} */
-
-a.page-navigation-anchor {
-    border-radius: .75rem;
-    padding: .5rem 1rem;
-    margin: -.5rem 0;
-    color: inherit;
-    text-align: center;
-    display: inline-block;
-    transition: background-color 255ms;
-}
-a.page-navigation-anchor:hover {
-    background-color: #333;
-}
-
-a.page-navigation-anchor svg {
-    width: 2rem;
-    height: 2rem;
-    vertical-align: middle;
-}
-a.page-navigation-anchor svg > path {
-    fill: currentColor;
 }

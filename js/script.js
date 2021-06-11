@@ -1,3 +1,33 @@
+const mainSection_node = document.querySelector("#main-section")
+
+mainSection_node.addEventListener("scroll", (event) => {
+  const child_nodes = event.target.children
+  
+  for (let child_node of child_nodes) {
+    const children_rect = child_node.getBoundingClientRect()
+
+    if (child_node.classList.contains("wrap-video-content")) {
+      const videoPlayer_node = child_node.querySelector(".video-post-player")
+
+      if (children_rect.top >= -100 && children_rect.bottom < mainSection_node.offsetHeight) {
+        child_node.classList.add("is-active")
+
+        if (videoPlayer_node.paused)
+          videoPlayer_node.play()
+      }
+      else {
+        child_node.classList.remove("is-active")
+
+        if (!videoPlayer_node.paused) {
+          videoPlayer_node.currentTime = 0
+          videoPlayer_node.pause()
+        }
+      }
+    }
+  }
+})
+
+
 const videoContainer_node = document.querySelector("#feature-content-container")
 const secondaryContainer_node = document.querySelector("#secondary-content-container")
 const videoPlayer_node = document.querySelector("#feature-content-player")
@@ -41,10 +71,27 @@ if (videoFile) {
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     if (videoPlayer_node.paused) {
-      console.log("paused")
       window.localStorage.removeItem("clip-file")
       videoContainer_node.remove()
+
       secondaryContainer_node.classList.add("is-active")
     }
+    else {
+      secondaryContainer_node.querySelector(".video-post-player").pause()
+    }
   }, 500)
+})
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const communityButton_node = document.querySelector("#new_community-button")
+  const communityName = sessionStorage.getItem("community-name")
+
+  if (communityName) {
+    communityButton_node.querySelector(".communitie-button-label").innerText = communityName
+    communityButton_node.querySelector(".communitie-button-image").setAttribute("alt", communityName)
+  }
+  else {
+    communityButton_node.remove()
+  }
 })
