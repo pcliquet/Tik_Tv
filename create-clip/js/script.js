@@ -1,4 +1,4 @@
-import ResponsivePointer from "https://lucianofelix.com.br/tri/js/components/Responsive_pointer.mjs"
+import ResponsivePointer from "https://lucianofelix.com.br/tri/js/components/responsive_pointer.mjs"
 
 
 const fileChooserCover_node = document.querySelector("#choose_file-cover")
